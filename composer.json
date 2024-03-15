@@ -1,0 +1,53 @@
+{
+    "name": "nickbeen/socialiteproviders-google-one-tap",
+    "description": "Google One Tap provider for Laravel Socialite",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "socialite",
+        "provider",
+        "google one tap"
+    ],
+    "authors": [
+        {
+            "name": "Nick Been",
+            "email": "nick@nickbeen.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "google/apiclient": "^2.15",
+        "socialiteproviders/manager": "^4.5"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "pestphp/pest": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\GoogleOneTap\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SocialiteProviders\\GoogleOneTap\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "google-task-composer-cleanup": "Google\\Task\\Composer::cleanup",
+        "pest": "./vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Oauth2"
+        ]
+    }
+}
