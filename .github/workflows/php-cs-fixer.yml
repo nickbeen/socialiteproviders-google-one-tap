@@ -1,37 +1,7 @@
-name: Check and fix PHP Coding Standards
+name: Check and fix PHP code styling
 
-on:
-  push:
-    branches:
-      - "fix-php-cs-fixer-action"
-  
+on: [pull_request, workflow_dispatch]
+
 jobs:
-  php-cs-fixer:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.release.target_commitish }}
-
-      - name: Save and restore cache for PHP CS Fixer
-        uses: actions/cache@v4
-        with:
-          path: .php-cs-fixer.cache
-          key: ${{ runner.OS }}-${{ github.repository }}-phpcsfixer-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.OS }}-${{ github.repository }}-phpcsfixer-
-
-      - name: Run PHP CS Fixer
-        uses: docker://oskarstark/php-cs-fixer-ga
-        with:
-          args: --allow-risky=yes
-        
-      - name: Commit changes from PHP CS Fixer
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Apply php-cs-fixer changes
+  update:
+    uses: nickbeen/.github/.github/workflows/php-cs-fixer.yml@main
