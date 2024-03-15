@@ -1,4 +1,4 @@
-name: Check and fix styling
+name: Check and fix PHP code styling
 
 on: [pull_request, workflow_dispatch]
 
