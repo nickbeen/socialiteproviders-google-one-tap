@@ -1,7 +1,9 @@
 name: Check and fix PHP Coding Standards
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - "fix-php-cs-fixer-action"
   
 jobs:
   php-cs-fixer:
