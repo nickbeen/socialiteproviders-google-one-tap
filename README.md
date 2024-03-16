@@ -3,7 +3,7 @@
 [![Latest version](https://img.shields.io/packagist/v/nickbeen/socialiteproviders-google-one-tap)](https://packagist.org/packages/nickbeen/socialiteproviders-google-one-tap)
 [![Total downloads](https://img.shields.io/packagist/dt/nickbeen/socialiteproviders-google-one-tap)](https://packagist.org/packages/nickbeen/socialiteproviders-google-one-tap)
 [![PHP Version](https://img.shields.io/packagist/php-v/nickbeen/socialiteproviders-google-one-tap)](https://packagist.org/packages/nickbeen/socialiteproviders-google-one-tap)
-[![License](https://img.shields.io/packagist/l/socialiteproviders-google-one-tap)](https://packagist.org/packages/nickbeen/socialiteproviders-google-one-tap)
+[![License](https://img.shields.io/packagist/l/nickbeen/socialiteproviders-google-one-tap)](https://packagist.org/packages/nickbeen/socialiteproviders-google-one-tap)
 
 A provider for [Laravel Socialite](https://laravel.com/docs/master/socialite) that allows authentication for Google through Google One Tap. The Google One Tap framework is build on top of OAuth2, but does not use the traditional OAuth authorize user flow. Instead of returning an access token, it returns an authenticating JWT token that expires after an hour.
 
